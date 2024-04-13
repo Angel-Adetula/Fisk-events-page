@@ -1,0 +1,66 @@
+.sign-in-bg {
+    background: #E4E7EF;
+    background-image: url("girls-cycling.png") ;
+    background-repeat: no-repeat;
+    background-position: 100% 150px;
+    background-attachment: fixed;
+    position: relative;  
+}
+
+.flex {
+    min-width: 600px;
+    min-height: 100vh;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sign-in-box {
+    min-height: 350.6px;
+    width: 498.9px;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    z-index: 200;
+    border-radius: 30px;
+    padding-top: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: white;
+}
+
+.sign-in-box h3 {
+    font-weight: 400;
+    text-align: center;
+    color:#152E64;
+    margin-bottom: 20px;
+}
+
+.sign-in-box label {
+    font-weight: 700;
+}
+
+.new-user-text {
+    background: none;
+    border: 0cm;
+    text-decoration: underline;
+    color: blue;
+    margin-bottom: 30px;
+}
+
+.new-user-text:hover{
+    cursor: pointer;
+}
+
+.btn {
+    border-radius: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #152E64;
+    border-color: #152E64;
+}
+
+.form-control {
+    background-color: #E4E7EF;
+}
