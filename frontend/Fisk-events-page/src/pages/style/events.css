@@ -1,0 +1,25 @@
+.events-section {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+  .search-area {
+    width: 30%;
+    padding: 20px;
+    overflow-y: auto; 
+  }
+  
+  .card-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; 
+  }
+  
+  
+  .title {
+    text-align: center;
+    margin: 10px;
+    color: #152e64;
+  }
+  
