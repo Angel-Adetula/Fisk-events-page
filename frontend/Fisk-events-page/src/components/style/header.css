@@ -1,0 +1,21 @@
+.nav_con {
+    background: #152E64;
+    margin: 0;
+    width: 100%;
+    padding-left: 1.4rem;
+    padding-right: 1.4rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    font-size: 15px;
+    font-weight: 700;
+    color: white;
+}
+
+.nav_con img {
+    height:30px;
+  }
+
+.nav {
+    justify-content: space-between;
+    font-family: "Open Sans";
+}

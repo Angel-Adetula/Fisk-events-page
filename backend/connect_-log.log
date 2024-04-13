@@ -1,0 +1,17 @@
+INFO:mysql.connector:package: mysql.connector.plugins
+INFO:mysql.connector:plugin_name: caching_sha2_password
+INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+WARNING:werkzeug: * Debugger is active!
+INFO:werkzeug: * Debugger PIN: 447-566-691
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:50:43] "OPTIONS /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:50:43] "POST /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:51:06] "OPTIONS /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:51:06] "POST /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:55:56] "OPTIONS /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:55:56] "POST /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:58:11] "OPTIONS /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:58:11] "POST /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 16:07:13] "OPTIONS /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 16:07:13] "POST /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 19:03:15] "OPTIONS /signin HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 19:03:15] "POST /signin HTTP/1.1" 200 -
