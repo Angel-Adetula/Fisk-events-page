@@ -18,6 +18,22 @@ function EventDetails() {
     window.location.href = "/sign-in";
   };
 
+  const convertTime = (timeString) => {
+    var timeArr = timeString.split(":");
+    var hours = parseInt(timeArr[0]);
+    var minutes = parseInt(timeArr[1]);
+
+    var period = hours >= 12 ? "pm" : "am";
+
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+
+    var formattedTime = hours + ":" + minutes + " " + period;
+
+    return formattedTime;
+  };
+
   return (
     <>
       <Header />
@@ -26,7 +42,9 @@ function EventDetails() {
           <h2>{event.title}</h2>
           <div className="date">
             <p className="event-date">Date: {event.date}</p>
-            {event.time && <p className="event-time">Time: {event.time}</p>}
+            {event.time && (
+              <p className="event-time">Time: {convertTime(event.time)}</p>
+            )}
           </div>
         </div>
         <div className="event-details-image-container">

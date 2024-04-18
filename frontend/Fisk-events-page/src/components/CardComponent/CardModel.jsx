@@ -28,6 +28,22 @@ function CardModel({ cardData }) {
     return formattedDate;
   };
 
+  function convertTime(timeString) {
+    var timeArr = timeString.split(":");
+    var hours = parseInt(timeArr[0]);
+    var minutes = parseInt(timeArr[1]);
+
+    var period = hours >= 12 ? "pm" : "am";
+
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    minutes = minutes < 10 ? "0" + minutes : minutes;
+
+    var formattedTime = hours + ":" + minutes + " " + period;
+
+    return formattedTime;
+  }
+
   return (
     <div className="card-container">
       {cardData.map((card, index) => (
@@ -43,7 +59,8 @@ function CardModel({ cardData }) {
               </p>
               <div className="card-info">
                 <p>
-                  <CalendarOutlined /> {formatDate(card.date)}
+                  <CalendarOutlined />{" "}
+                  {`${formatDate(card.date)} at ${convertTime(card.time)}`}
                 </p>
                 <p>
                   <EnvironmentOutlined /> {card.location}

@@ -36,7 +36,7 @@ const originalData = [
     carousel: carouselImage,
     img: dit,
     eventType: "live",
-    time: "5pm",
+    time: "17:00",
     type: "Academic",
     tags: ["Computer Science, Software Engineering", "Product Management"],
     PandV: {
@@ -57,7 +57,7 @@ const originalData = [
     carousel: career,
     img: summer,
     eventType: "virtual",
-    time: "4pm",
+    time: "16:00",
     type: "Academic",
     tags: ["Career Develoopment", "Opportunities"],
     PandV: {
@@ -78,7 +78,7 @@ const originalData = [
     carousel: votingCar,
     img: voting,
     eventType: "virtual",
-    time: "3pm",
+    time: "15:00",
     type: "Extra Curricular",
     tags: ["Computer Science", "Voting"],
     PandV: {
@@ -99,7 +99,7 @@ const originalData = [
     carousel: dfsj,
     img: bts,
     eventType: "live",
-    time: "4:30pm",
+    time: "16:30",
     type: "Academic",
     tags: ["Data Science", "Social Justice"],
     PandV: {
