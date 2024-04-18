@@ -1,19 +1,42 @@
-import React, { useState } from "react";
-import "./search.css"; // Import the CSS file containing the styles
+import React, { useState, useEffect } from "react";
+import "./search.css";
 
 const SearchBox = ({ onSearch }) => {
   const [name, setName] = useState("");
   const [organization, setOrganization] = useState("");
-  const [date, setDate] = useState("");
+  const [dateFilter, setDateFilter] = useState("all");
   const [eventType, setEventType] = useState("all");
+  const organizations = [
+    "Fisk CS Club",
+    "OCPD",
+    "Axon NeuroScience Club",
+    "Data Science Club",
+  ];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    onSearch({ name, organization, date, eventType });
+  const handleClear = () => {
+    setName("");
+    setOrganization("");
+    setDateFilter("all");
+    setEventType("all");
+    onSearch({
+      name: "",
+      organization: "",
+      dateFilter: "all",
+      eventType: "all",
+    });
+  };
+
+  useEffect(() => {
+    const searchParams = { name, organization, dateFilter, eventType };
+    handleSearch(searchParams);
+  }, [name, organization, dateFilter, eventType]);
+
+  const handleSearch = (searchParams) => {
+    onSearch(searchParams);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="search-form">
+    <form className="search-form">
       <input
         type="text"
         value={name}
@@ -25,22 +48,54 @@ const SearchBox = ({ onSearch }) => {
         onChange={(e) => setOrganization(e.target.value)}
       >
         <option value="">Filter by organization</option>
-        <option value="Fisk CS Club">Fisk CS Club</option>
-        <option value="OCPD">OCPD</option>
-        <option value="Axon NeuroScience Club">Axon NeuroScience Club</option>
+        {organizations.map((org, index) => (
+          <option key={index} value={org}>
+            {org}
+          </option>
+        ))}
       </select>
-      <input
-        type="date"
-        value={date}
-        onChange={(e) => setDate(e.target.value)}
-        placeholder="Filter by date..."
-      />
-      <select value={eventType} onChange={(e) => setEventType(e.target.value)}>
-        <option value="all">All events</option>
-        <option value="virtual">Virtual events</option>
-        <option value="live">Live events</option>
+
+      <select
+        value={dateFilter}
+        onChange={(e) => setDateFilter(e.target.value)}
+      >
+        <option value="all">Current &amp; Upcoming Events</option>
+        <option value="pastWeek">Past week</option>
+        <option value="pastMonth">Past month</option>
+        <option value="semester">Entire semester</option>
       </select>
-      <button type="submit">Search</button>
+      <div>
+        <label>
+          <input
+            type="radio"
+            value="all"
+            checked={eventType === "all"}
+            onChange={() => setEventType("all")}
+          />
+          All events
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="virtual"
+            checked={eventType === "virtual"}
+            onChange={() => setEventType("virtual")}
+          />
+          Virtual events
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="live"
+            checked={eventType === "live"}
+            onChange={() => setEventType("live")}
+          />
+          Live events
+        </label>
+      </div>
+      <button type="button" onClick={handleClear}>
+        Clear
+      </button>
     </form>
   );
 };

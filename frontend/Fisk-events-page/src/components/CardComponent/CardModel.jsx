@@ -23,8 +23,8 @@ function CardModel({ cardData }) {
                 <p>
                   <EnvironmentOutlined /> {card.location}
                 </p>
-                <Divider />
-                <p>
+                <Divider style={{ color: "white" }} />
+                <p className="bottom">
                   <TeamOutlined />
                   {card.organization}
                 </p>

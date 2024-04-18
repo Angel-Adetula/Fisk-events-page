@@ -19,7 +19,9 @@
   
   .title {
     text-align: center;
-    margin: 10px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     color: #152e64;
+    font-weight: 300;
   }
   
