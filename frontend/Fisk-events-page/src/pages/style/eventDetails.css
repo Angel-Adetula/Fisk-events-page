@@ -1,0 +1,80 @@
+.description {
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 10px;
+}
+  
+.event-details-container {
+    margin-top: 20px;
+    padding: 10px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+  
+.event-details-header {
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+}
+  
+.date {
+    left: 500px;
+    color: #152E64;
+    font-size: 14px;
+}
+
+.detail-container{
+    margin-top: 50px;
+}
+.event-date {
+    margin-right: 100px;
+}
+  
+.event-time {
+    margin-top: -15px;
+}
+  
+.event-details-image-container {
+    margin-top: 20px;
+    display: flex;
+    align-items: flex-start; 
+}
+  
+.event-details-image {
+    margin-right: 20px;
+    width: 350px;
+    border-radius: 15px;
+}
+  
+  .event-details-organization {
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+  }
+  .detail-header{
+    color: #152E64;
+    font-size: 15px;
+    font-weight: bold;
+  }
+  .detail-header-2{
+    font-size: 13px;
+    font-style: italic;
+  }
+  .meta-data{
+      font-size: 13px;
+  }
+  .signup-button {
+    cursor: pointer;
+    box-shadow: none;
+    border-radius: 8px;
+    width: 200px;
+    color: white;
+    background-color: #152E64;
+    margin-bottom: 30px;
+    border:none;
+    
+  }
+  button:hover {
+    background-color: #40a9ff;
+}
+  

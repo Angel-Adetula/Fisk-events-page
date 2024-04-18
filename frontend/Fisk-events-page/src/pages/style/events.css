@@ -1,0 +1,37 @@
+.events-section {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+  
+  .search-area {
+    width: 30%;
+    padding: 20px;
+    overflow-y: auto; 
+  }
+  
+  .card-area {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto; 
+  }
+  
+  
+  .title {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #152e64;
+    font-weight: 300;
+  }
+  
+  .signin-button{
+    display: block;
+    width: calc(100% - 40px); 
+    padding: 10px;
+    background-color: #152E64;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

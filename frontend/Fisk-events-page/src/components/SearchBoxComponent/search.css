@@ -1,0 +1,39 @@
+.search-form {
+    left: 0; 
+    bottom: 0; 
+    overflow-y: auto; 
+    max-height: 100%; 
+}
+  
+  
+.search-form input,
+  .search-form select {
+    display: block;
+    width: calc(100% - 40px); 
+    margin-bottom: 12px;
+    margin-top: 12px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+
+.search-form button {
+    display: block;
+    width: calc(100% - 40px); 
+    padding: 10px;
+    background-color: #152E64;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.search-form button:hover {
+    background-color: #40a9ff;
+}
+
+.event-type{
+   margin-right: 15px;
+}
