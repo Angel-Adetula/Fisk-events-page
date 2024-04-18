@@ -45,19 +45,19 @@ function CardModel({ cardData }) {
   }
 
   return (
-    <div className="card-container">
+    <div className="card-model-container">
       {cardData.map((card, index) => (
-        <div key={index} className="card">
+        <div key={index} className="card-model">
           <div>
-            <img src={card.img} className="card-image" alt="voting" />
+            <img src={card.img} className="card-model-image" alt="voting" />
             <Link to={`/event/${index}`}>
-              <h2 className="card-title">{card.title}</h2>
+              <h2 className="card-model-title">{card.title}</h2>
             </Link>
-            <div className="card-body">
-              <p className="card-description">
+            <div className="card-model-body">
+              <p className="card-model-description">
                 {truncateDescription(card.description, 108)}
               </p>
-              <div className="card-info">
+              <div className="card-model-info">
                 <p>
                   <CalendarOutlined />{" "}
                   {`${formatDate(card.date)} at ${convertTime(card.time)}`}

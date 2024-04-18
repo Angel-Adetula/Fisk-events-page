@@ -1,0 +1,17 @@
+.img-pick {
+    display: block;
+    border: 2px dotted blue;
+    position: absolute;
+    height: 200px;
+    width:  200px;
+    margin-left: 10px;
+    border-radius: 20px;
+    padding: 0cm;
+}
+
+.img-pick img {
+    border-radius: 20px;
+    width:200px;
+    height:200px;
+    object-fit: cover;
+}

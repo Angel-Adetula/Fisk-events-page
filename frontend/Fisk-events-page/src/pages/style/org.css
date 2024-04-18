@@ -1,0 +1,16 @@
+.bg{
+    height: 100vh;
+    background-color: #E4E7EF;
+    padding-top: 10px;
+}
+
+.header {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ml-20 {
+    margin-left: 20px;
+}

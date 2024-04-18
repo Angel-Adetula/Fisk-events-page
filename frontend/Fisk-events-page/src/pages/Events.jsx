@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./style/events.css";
-import Header from "../components/Header";
 import carouselImage from "../assets/carousel.jpg";
 import votingCar from "../assets/voh.png";
 import voting from "../assets/voting.png";
@@ -159,7 +158,6 @@ const Events = () => {
 
   return (
     <>
-      <Header />
       <div>
         <CarouselModel cardData={cardData} />
         <h1 className="title">Events</h1>
@@ -170,7 +168,7 @@ const Events = () => {
             </button>
             <SearchBox onSearch={handleSearch} />
           </div>
-          <div className="card-area">
+          <div className="card-model-area">
             <CardModel cardData={filteredData} />
           </div>
         </div>

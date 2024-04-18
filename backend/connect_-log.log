@@ -2,16 +2,28 @@ INFO:mysql.connector:package: mysql.connector.plugins
 INFO:mysql.connector:plugin_name: caching_sha2_password
 INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
 WARNING:werkzeug: * Debugger is active!
-INFO:werkzeug: * Debugger PIN: 447-566-691
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:50:43] "OPTIONS /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:50:43] "POST /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:51:06] "OPTIONS /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:51:06] "POST /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:55:56] "OPTIONS /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:55:56] "POST /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:58:11] "OPTIONS /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 15:58:11] "POST /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 16:07:13] "OPTIONS /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 16:07:13] "POST /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 19:03:15] "OPTIONS /signin HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [12/Apr/2024 19:03:15] "POST /signin HTTP/1.1" 200 -
+INFO:werkzeug: * Debugger PIN: 714-719-195
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "OPTIONS /orgs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "OPTIONS /orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "OPTIONS /orgs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "OPTIONS /orgs/gabe@gmail.com HTTP/1.1" 200 -
+ERROR:root:USER ORG ERROR: An error has occured: Failed processing format-parameters; MySQL Connection not available
+ERROR:root:ALL ORGS ERROR: An error has occured: 2055: Lost connection to MySQL server at 'localhost:3306', system error: 1 [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2578)
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "GET /orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "GET /orgs HTTP/1.1" 200 -
+ERROR:root:ALL ORGS ERROR: An error has occured: 2055: Lost connection to MySQL server at 'localhost:3306', system error: 8 EOF occurred in violation of protocol (_ssl.c:2426)
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:47] "GET /orgs HTTP/1.1" 200 -
+ERROR:root:USER ORG ERROR: An error has occured: Failed processing format-parameters; MySQL Connection not available
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:47] "GET /orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "OPTIONS /orgs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "OPTIONS /orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "OPTIONS /orgs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "OPTIONS /orgs/gabe@gmail.com HTTP/1.1" 200 -
+ERROR:root:ALL ORGS ERROR: An error has occured: 2055: Lost connection to MySQL server at 'localhost:3306', system error: 8 EOF occurred in violation of protocol (_ssl.c:2426)
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "GET /orgs HTTP/1.1" 200 -
+ERROR:root:USER ORG ERROR: An error has occured: Failed processing format-parameters; MySQL Connection not available
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "GET /orgs/gabe@gmail.com HTTP/1.1" 200 -
+ERROR:root:ALL ORGS ERROR: An error has occured: 2055: Lost connection to MySQL server at 'localhost:3306', system error: 8 EOF occurred in violation of protocol (_ssl.c:2426)
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "GET /orgs HTTP/1.1" 200 -
+ERROR:root:USER ORG ERROR: An error has occured: Failed processing format-parameters; MySQL Connection not available
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "GET /orgs/gabe@gmail.com HTTP/1.1" 200 -

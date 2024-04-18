@@ -36,7 +36,6 @@ function EventDetails() {
 
   return (
     <>
-      <Header />
       <div className="event-details-container">
         <div className="event-details-header">
           <h2>{event.title}</h2>

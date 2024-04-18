@@ -1,0 +1,59 @@
+
+.card {
+    margin: 30px;
+}
+
+.card-footer {
+    font-size: small;
+    line-height: 0.5rem;
+    background: #C29108;
+    display: flex;
+    font-weight: 700;
+    color: white;
+    justify-content: end;
+    padding-right: 30px;
+}
+
+.card img{
+    height: 100px;
+    width: 100px;
+    object-fit: fill;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.event-header {
+    overflow: hidden;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 1; 
+        text-overflow: ellipsis;
+    font-weight:700;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+.card-text {
+    overflow: hidden;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical; 
+    -webkit-line-clamp: 2; 
+        text-overflow: ellipsis;
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+.date {
+    margin:0px;
+    padding-top:0px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.edit-button {
+    margin-left: 50px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin-right: 20px;
+    
+}

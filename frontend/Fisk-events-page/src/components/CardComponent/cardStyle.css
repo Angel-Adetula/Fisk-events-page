@@ -1,9 +1,9 @@
-.card-container {
+.card-model-container {
     display: flex;
     flex-wrap: wrap;
 }
   
-.card {
+.card-model {
     background-color: #152E64; 
     color: white; 
     width: 300px; 
@@ -16,22 +16,22 @@
     transition: transform 0.3s ease-in-out; 
 }
 
-.card:hover {
+.card-model:hover {
     transform: translateY(-5px); 
 }
 .bottom{
     text-align: center;
 }
 
-.card-body {
+.card-model-body {
     padding: 20px; 
 }
 
-.card-image {
+.card-model-image {
     width: 100%; 
 }
 
-.card-title {
+.card-model-title {
     margin-top: 15px;
     color: white;
     text-align: center;
@@ -39,16 +39,16 @@
     margin-bottom: -5px; 
 }
 
-.card-description {
+.card-model-description {
     font-size: 14px; 
     margin-bottom: 10px; 
 }
 
-.card-info {
+.card-model-info {
     font-size: 12px; 
 }
 
-.card-info p {
+.card-mdoel-info p {
     margin-bottom: 5px; 
 }
 
