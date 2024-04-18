@@ -30,7 +30,7 @@ const originalData = [
     title: "Diverse Roles in Tech",
     description:
       "Join us in an enlightening exploration led by Dr. Marcus, a distinguished Quantum Engineer at IBM,as we delve into the captivating world where AI intersects with Quantum Engineering. With a wealth of experience and expertise, Dr. Marcus spearheads groundbreaking research and innovation at the forefront of quantum technology. Discover alongside him how pioneers in the field utilize AI's creative potential to sculpt new paradigms and push the boundaries of possibility. Get ready to embark on a journey of imagination and discovery as we unravel the fusion of artistry and technology in this fascinating realm.",
-    date: "9th April, 2024",
+    date: "2024-04-20",
     location: "Appleton Room",
     organization: "Fisk CS Club",
     carousel: carouselImage,
@@ -51,7 +51,7 @@ const originalData = [
     title: "Career Week",
     description:
       "Explore endless career possibilities at Career Week! Join us for workshops, panels, and networking opportunities tailored to boost your career journey. From resume tips to industry insights, seize the chance to pave your path to success!",
-    date: "19th April, 2024",
+    date: "2024-04-19",
     location: "Multipurpose Room @ Spence Hall",
     organization: "Fisk OCPD",
     carousel: career,
@@ -72,7 +72,7 @@ const originalData = [
     title: "Voting Open House",
     description:
       "Voting Open House hosted by the CS Club provides an interactive platform for members and enthusiasts alike to delve into the mechanics of digital democracy.",
-    date: "26th April, 2024",
+    date: "2024-05-02",
     location: "Library 317",
     organization: "Fisk CS Club",
     carousel: votingCar,
@@ -93,7 +93,7 @@ const originalData = [
     title: "Data For Social Justice",
     description:
       "Join us at Voices for Change, a dynamic forum dedicated to advancing social justice. This event brings together activists, community leaders, and changemakers to address pressing issues and drive meaningful action. ",
-    date: "28th April, 2024",
+    date: "2024-04-22",
     location: "PJ 122",
     organization: "Data Science Club",
     carousel: dfsj,

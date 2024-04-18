@@ -16,6 +16,18 @@ function CardModel({ cardData }) {
     return `${description.substring(0, maxLength)}...`;
   };
 
+  const formatDate = (dateStr) => {
+    const dateObj = new Date(dateStr + "T00:00:00");
+
+    const options = { year: "numeric", month: "long", day: "2-digit" };
+
+    const formattedDate = new Intl.DateTimeFormat("en-US", options).format(
+      dateObj
+    );
+
+    return formattedDate;
+  };
+
   return (
     <div className="card-container">
       {cardData.map((card, index) => (
@@ -31,7 +43,7 @@ function CardModel({ cardData }) {
               </p>
               <div className="card-info">
                 <p>
-                  <CalendarOutlined /> {card.date}
+                  <CalendarOutlined /> {formatDate(card.date)}
                 </p>
                 <p>
                   <EnvironmentOutlined /> {card.location}
