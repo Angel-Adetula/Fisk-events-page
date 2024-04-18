@@ -13,52 +13,106 @@ import CardModel from "../components/CardComponent/CardModel";
 import SearchBox from "../components/SearchBoxComponent/SearchBox";
 import CarouselModel from "../components/CarouselComponent/Carousel";
 
-const cardData = [
+const shuffleArray = (array) => {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+};
+
+const handleSignIn = () => {
+  window.location.href = "/sign-in";
+};
+
+const originalData = [
   {
     title: "Diverse Roles in Tech",
     description:
       "Join us in an enlightening exploration led by Dr. Marcus, a distinguished Quantum Engineer at IBM,as we delve into the captivating world where AI intersects with Quantum Engineering. With a wealth of experience and expertise, Dr. Marcus spearheads groundbreaking research and innovation at the forefront of quantum technology. Discover alongside him how pioneers in the field utilize AI's creative potential to sculpt new paradigms and push the boundaries of possibility. Get ready to embark on a journey of imagination and discovery as we unravel the fusion of artistry and technology in this fascinating realm.",
     date: "9th April, 2024",
-    location: "Location 1",
+    location: "Appleton Room",
     organization: "Fisk CS Club",
     carousel: carouselImage,
     img: dit,
     eventType: "live",
+    time: "5pm",
+    type: "Academic",
+    tags: ["Computer Science, Software Engineering", "Product Management"],
+    PandV: {
+      "Hours Offered": "3",
+      "Volunteers Needed": "4",
+      "Volunteer Hours": "1",
+      "Volunteer Link": "Link here",
+    },
+    videoCall: "/",
   },
   {
     title: "Career Week",
     description:
       "Explore endless career possibilities at Career Week! Join us for workshops, panels, and networking opportunities tailored to boost your career journey. From resume tips to industry insights, seize the chance to pave your path to success!",
-    date: "18th April, 2024",
-    location: "Location 2",
-    organization: "OCPD",
+    date: "19th April, 2024",
+    location: "Multipurpose Room @ Spence Hall",
+    organization: "Fisk OCPD",
     carousel: career,
     img: summer,
     eventType: "virtual",
+    time: "4pm",
+    type: "Academic",
+    tags: ["Career Develoopment", "Opportunities"],
+    PandV: {
+      "Hours Offered": "1",
+      "Volunteers Needed": "15",
+      "Volunteer Hours": "2.5",
+      "Volunteer Link": "Link here",
+      videoCall: "/",
+    },
   },
   {
     title: "Voting Open House",
     description:
       "Voting Open House hosted by the CS Club provides an interactive platform for members and enthusiasts alike to delve into the mechanics of digital democracy.",
     date: "26th April, 2024",
-    location: "Location 3",
+    location: "Library 317",
     organization: "Fisk CS Club",
     carousel: votingCar,
     img: voting,
     eventType: "virtual",
+    time: "3pm",
+    type: "Extra Curricular",
+    tags: ["Computer Science", "Voting"],
+    PandV: {
+      "Hours Offered": "4",
+      "Volunteers Needed": "10",
+      "Volunteer Hours": "2",
+      "Volunteer Link": "Link here",
+    },
+    videoCall: "/",
   },
   {
     title: "Data For Social Justice",
     description:
       "Join us at Voices for Change, a dynamic forum dedicated to advancing social justice. This event brings together activists, community leaders, and changemakers to address pressing issues and drive meaningful action. ",
     date: "28th April, 2024",
-    location: "Location 4",
+    location: "PJ 122",
     organization: "Data Science Club",
     carousel: dfsj,
     img: bts,
     eventType: "live",
+    time: "4:30pm",
+    type: "Academic",
+    tags: ["Data Science", "Social Justice"],
+    PandV: {
+      "Hours Offered": "2",
+      "Volunteers Needed": "5",
+      "Volunteer Hours": "2",
+      "Volunteer Link": "Link here",
+    },
+    videoCall: "/",
   },
 ];
+
+export const cardData = shuffleArray(originalData);
 
 const Events = () => {
   const [filteredData, setFilteredData] = useState(cardData);
@@ -111,6 +165,9 @@ const Events = () => {
         <h1 className="title">Events</h1>
         <div className="events-section">
           <div className="search-area">
+            <button className="signin-button" onClick={handleSignIn}>
+              Sign In To Add Events
+            </button>
             <SearchBox onSearch={handleSearch} />
           </div>
           <div className="card-area">

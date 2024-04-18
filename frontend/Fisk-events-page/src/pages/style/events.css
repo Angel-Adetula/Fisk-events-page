@@ -25,3 +25,13 @@
     font-weight: 300;
   }
   
+  .signin-button{
+    display: block;
+    width: calc(100% - 40px); 
+    padding: 10px;
+    background-color: #152E64;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./cardStyle.css";
 import { Divider } from "antd";
 import {
@@ -21,8 +22,10 @@ function CardModel({ cardData }) {
         <div key={index} className="card">
           <div>
             <img src={card.img} className="card-image" alt="voting" />
-            <div className="card-body">
+            <Link to={`/event/${index}`}>
               <h2 className="card-title">{card.title}</h2>
+            </Link>
+            <div className="card-body">
               <p className="card-description">
                 {truncateDescription(card.description, 108)}
               </p>

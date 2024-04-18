@@ -24,30 +24,32 @@
 }
 
 .card-body {
-padding: 20px; 
+    padding: 20px; 
 }
 
 .card-image {
-width: 100%; 
+    width: 100%; 
 }
 
 .card-title {
-text-align: center;
-font-size: 18px; 
-margin-bottom: 10px; 
+    margin-top: 15px;
+    color: white;
+    text-align: center;
+    font-size: 18px; 
+    margin-bottom: -5px; 
 }
 
 .card-description {
-font-size: 14px; 
-margin-bottom: 10px; 
+    font-size: 14px; 
+    margin-bottom: 10px; 
 }
 
 .card-info {
-font-size: 12px; 
+    font-size: 12px; 
 }
 
 .card-info p {
-margin-bottom: 5px; 
+    margin-bottom: 5px; 
 }
 
 .bottom{
