@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import "./style/sign_in.css";
 import { useNavigate } from "react-router-dom";
-import bg_art from "../assets/girls-cycling.png";
 
 
 const Sign_in = () => {
@@ -37,6 +36,7 @@ const Sign_in = () => {
           return alert(stats.error_message)
         } else {
           localStorage.setItem("username", stats.username)
+          localStorage.setItem("userId", inputs.email)
           return navigate("/")
         }
       }

@@ -1,0 +1,80 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+
+.user-events-pg {
+    background: #E4E7EF;
+    padding-left:30px;
+    padding-right: 30px;
+    min-height: 100vh;
+}
+
+.show-events{
+    padding-top: 30px;
+}
+
+.show-events-bar {
+    display: flex;
+    justify-content: space-between;
+    border: 1.5px solid  #152E64;
+    border-radius: 20px;
+    font-size: small;
+    padding: 0;
+    background: white;
+    margin-bottom: 20px;
+}
+
+.selected {
+    background: #152E64;
+    background-size: cover;
+    color: white !important;
+}
+
+.selection {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    width: 50%;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 545;
+    justify-content: center;
+    align-items: center;
+    color:#152E64;
+}
+
+.selection:hover {
+    cursor: pointer;
+}
+
+.add-events {
+    background: #004AAD;
+    border-radius: 20px;
+    padding-left:30px;
+    padding-right: 30px;
+    padding-top:10px;
+    padding-bottom:10px;
+    color:white;
+    font-size:13px;
+    font-weight: 600;
+    z-index: 400;
+    border: none;
+    position: fixed;
+    bottom:0%;
+    right:0%;
+    margin:50px;
+    cursor: pointer;
+}
+
+.hp {
+    margin-top: 10px;
+    margin-bottom:3px;
+    font-weight: 700;
+}
+
+.si {
+    max-width: 300px;
+}

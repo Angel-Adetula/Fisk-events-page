@@ -1,7 +1,7 @@
 .nav_con {
+    position: relative;
     background: #152E64;
-    margin: 0;
-    width: 100%;
+    height: calc(100vh* 12.6%);
     padding-left: 1.4rem;
     padding-right: 1.4rem;
     padding-top: 0.75rem;
@@ -9,18 +9,12 @@
     font-size: 15px;
     font-weight: 700;
     color: white;
-}
-
-.nav_con img {
-    height:30px;
-    object-fit: cover;
-  }
-
-.nav {
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    font-family: "Open Sans";
+    align-items: center;
 }
 
-.nav-link{
-    cursor: pointer;
-}
+.container img {
+    height:30px;
+  }
