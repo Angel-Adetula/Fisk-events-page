@@ -15,6 +15,7 @@ function Organizations() {
     const roles = ["Executive", "Member"]
     const userId = localStorage.getItem("userId")
 
+
     const handleCloseJoin = () => setShowJoin(false);
     const handleShowJoin = () => setShowJoin(true);
     const handleCloseRegister = () => setShowRegister(false);

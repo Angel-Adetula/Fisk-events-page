@@ -142,8 +142,11 @@ class Backend:
     
     def retrieve_users_org_only(self, usr):
         try:
-            orgs_query = '''SELECT name from organizations where orgid = (
-                            SELECT OrgID FROM userorg where user = %s and role="Executive");;'''
+            orgs_query = '''SELECT name FROM organizations 
+                WHERE orgid IN (
+                    SELECT OrgID FROM userorg 
+                    WHERE user = %s AND role = 'Executive'
+                );'''
             
             self.sql_cursor.execute(orgs_query, (usr,))
             result = self.sql_cursor.fetchall()

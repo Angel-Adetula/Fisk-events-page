@@ -63,16 +63,17 @@ def sign_up():
     return jsonify(result)
 
 
-# @app.route("/user-events/<userId>", methods=['GET'])
-# def get_user_events(userId):
-#     userEvents = backend.retrieve_user_events(userId=userId)
-#     return jsonify({"userEvents": userEvents})
+@app.route("/events/<userId>", methods=['GET'])
+def get_user_events(userId):
+    userEvents = backend.retrieve_user_events(userId=userId)
+    return jsonify({"userEvents": userEvents})
 
 @app.route("/events", methods=['POST'])
 def add_event():
     event = request.json["event"]
     event_added = backend.add_events(event)
     return jsonify({"event_added": event_added})
+
 
 @app.route("/orgs", methods=['POST'])
 def add_org():

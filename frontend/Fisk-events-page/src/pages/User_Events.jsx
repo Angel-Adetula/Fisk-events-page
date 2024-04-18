@@ -16,20 +16,23 @@ const User_Events = () => {
     navigate('/add-event', {state:{event_info:eventInfo}})
   }
 
-  useEffect(() => {
-    fetch(`http://127.0.0.1:8080/${userId}`,
-      {
-        method: "GET",
-        headers: {
-          "Accept" : 'application/json',
-          "Content-Type": "application/json"
-        },
-      }).then(res => res.json())
-      .then(stats => {
-        setEventInfo(stats.userEvents)
-      }
-    )
-  }, []);
+  // useEffect(() => {
+  //   fetch(`http://127.0.0.1:8080/orgs/${userId}`, 
+  //       {
+  //           method: 'GET',
+  //           headers: {
+  //           'Accept': 'application/json',
+  //           'Content-Type': 'application/json'
+  //           },        
+  //       }).then(res=> res.json())
+  //       .then(stats=> {
+  //           if(stats.error){
+  //           return alert(stats.error)
+  //           } else{
+  //               setUserOrgs(stats.result)
+  //           }
+  //       })
+  //   }, []);
 
   return (
 
@@ -49,4 +52,4 @@ const User_Events = () => {
   )
 }
 
-export default User_Events
+export default User_Events;
