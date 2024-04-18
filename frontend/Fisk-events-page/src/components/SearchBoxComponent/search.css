@@ -31,3 +31,7 @@
 .search-form button:hover {
     background-color: #40a9ff;
 }
+
+.event-type{
+   margin-right: 15px;
+}

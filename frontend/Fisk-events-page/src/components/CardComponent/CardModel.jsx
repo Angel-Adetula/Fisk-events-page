@@ -1,3 +1,4 @@
+import React from "react";
 import "./cardStyle.css";
 import { Divider } from "antd";
 import {
@@ -7,6 +8,13 @@ import {
 } from "@ant-design/icons";
 
 function CardModel({ cardData }) {
+  const truncateDescription = (description, maxLength) => {
+    if (description.length <= maxLength) {
+      return description;
+    }
+    return `${description.substring(0, maxLength)}...`;
+  };
+
   return (
     <div className="card-container">
       {cardData.map((card, index) => (
@@ -15,7 +23,9 @@ function CardModel({ cardData }) {
             <img src={card.img} className="card-image" alt="voting" />
             <div className="card-body">
               <h2 className="card-title">{card.title}</h2>
-              <p className="card-description">{card.description}</p>
+              <p className="card-description">
+                {truncateDescription(card.description, 108)}
+              </p>
               <div className="card-info">
                 <p>
                   <CalendarOutlined /> {card.date}
@@ -23,12 +33,12 @@ function CardModel({ cardData }) {
                 <p>
                   <EnvironmentOutlined /> {card.location}
                 </p>
-                <Divider style={{ color: "white" }} />
-                <p className="bottom">
-                  <TeamOutlined />
-                  {card.organization}
-                </p>
               </div>
+              <Divider className="custom-divider" />
+              <p className="bottom">
+                <TeamOutlined />
+                {card.organization}
+              </p>
             </div>
           </div>
         </div>

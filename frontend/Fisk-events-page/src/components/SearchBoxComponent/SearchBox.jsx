@@ -65,7 +65,7 @@ const SearchBox = ({ onSearch }) => {
         <option value="semester">Entire semester</option>
       </select>
       <div>
-        <label>
+        <label className="event-type">
           <input
             type="radio"
             value="all"
@@ -74,7 +74,7 @@ const SearchBox = ({ onSearch }) => {
           />
           All events
         </label>
-        <label>
+        <label className="event-type">
           <input
             type="radio"
             value="virtual"
@@ -83,7 +83,7 @@ const SearchBox = ({ onSearch }) => {
           />
           Virtual events
         </label>
-        <label>
+        <label className="event-type">
           <input
             type="radio"
             value="live"
