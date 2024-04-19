@@ -1,6 +1,14 @@
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 142-722-526
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:48:03] "OPTIONS /orgs HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:48:03] "OPTIONS /orgs/mayo@gmail.com HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:48:03] "OPTIONS /orgs HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:48:03] "OPTIONS /orgs/mayo@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:55:20] "OPTIONS /orgs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:55:20] "OPTIONS /orgs/mayo@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:55:20] "OPTIONS /orgs HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:55:20] "OPTIONS /orgs/mayo@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:55:20] "GET /orgs/mayo@gmail.com HTTP/1.1" 200 -
+ERROR:root:ALL ORGS ERROR: An error has occured: 2013 (HY000): Lost connection to MySQL server during query
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:55:20] "GET /orgs HTTP/1.1" 200 -
+ERROR:root:USER ORG ERROR: An error has occured: 2013 (HY000): Lost connection to MySQL server during query
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:55:20] "GET /orgs/mayo@gmail.com HTTP/1.1" 200 -
+ERROR:root:ALL ORGS ERROR: An error has occured: 2013 (HY000): Lost connection to MySQL server during query
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:55:20] "GET /orgs HTTP/1.1" 200 -
