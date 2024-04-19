@@ -16,23 +16,22 @@ const User_Events = () => {
     navigate('/add-event', {state:{event_info:eventInfo}})
   }
 
-  // useEffect(() => {
-  //   fetch(`http://127.0.0.1:8080/orgs/${userId}`, 
-  //       {
-  //           method: 'GET',
-  //           headers: {
-  //           'Accept': 'application/json',
-  //           'Content-Type': 'application/json'
-  //           },        
-  //       }).then(res=> res.json())
-  //       .then(stats=> {
-  //           if(stats.error){
-  //           return alert(stats.error)
-  //           } else{
-  //               setUserOrgs(stats.result)
-  //           }
-  //       })
-  //   }, []);
+  useEffect(() => {
+    fetch(`http://127.0.0.1:8080/events/${userId}`, 
+        {
+            method: 'GET',
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },        
+        }).then(res=> res.json())
+        .then(stats=> {
+          setEventInfo(stats.userEvents)
+          console.log("userEvents",stats.userEvents )
+        })
+    }, []);
+
+
 
   return (
 
@@ -44,7 +43,19 @@ const User_Events = () => {
       <a className={`selection ${!showActive && "selected"}`} onClick={() => setShowActive(false)}>Past Events</a>
     </div>
     </div>
-      <User_Events_Card/>
+    {eventInfo.map(option=> {
+          // const image = URL.createObjectURL(option.picture);
+          return (
+            <User_Events_Card header = {option.event_title}
+            desc = {option.event_details}
+            date = {option.date}
+            img = {option.picture}
+            eventCode={option.sign_in}
+            featured={option.featured}/>
+          )
+    })}
+
+      
       <button onClick={() =>{toForm()}} className="add-events">Add Events </button>
 
     </div>

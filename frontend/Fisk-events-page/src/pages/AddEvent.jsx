@@ -1,13 +1,16 @@
 import React from 'react';
 import { useState, useEffect} from 'react';
 import {DatePicker} from "antd";
+import { useNavigate } from "react-router-dom";
 import "./style/add_event.css";
 
 
 function AddEvent() {
-  const [newEvent, setNewEvent] = useState({method: "Live", 
-    host: "Organization", isFeatured: false, food:false, need_volunteer:false, date:""})
   const userId = localStorage.getItem("userId")
+  const [newEvent, setNewEvent] = useState({user_id:userId, method: "Live", 
+    host: "Organization", isFeatured: false, food:false, need_volunteer:false, date:""})
+  const [displayPic,setDisplayPic] = useState("");
+  const navigate = useNavigate();
   
   const event_types= [
     "Career Fairs", "Guest Lectures", 
@@ -36,10 +39,22 @@ function AddEvent() {
       })}, []);
 
 
-  const onImageChange = (event) => {
-    if (event.target.files && event.target.files[0]) {
-      setNewEvent(values => ({...values, ["picture"]: URL.createObjectURL(event.target.files[0])}));
-    }
+  const onImageChange = (e) => {
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0])
+    reader.onload= () => {
+      console.log("reader", reader.result)
+      setDisplayPic(reader.result)
+      setNewEvent(values => ({...values, ["picture"]: reader.result}));
+   }}
+
+   const onCarouselImageChange = (event) => {
+    var reader = new FileReader();
+    reader.readAsDataURL(e.target.files[0])
+    reader.onload= () => {
+      console.log("reader", reader.result)
+      setNewEvent(values => ({...values, ["carousel"]: reader.result}));
+   }
    }
 
   const handleChange = (event) => {
@@ -68,7 +83,6 @@ function AddEvent() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setNewEvent(values => ({...values, ["user_id"]: userId}));
     fetch("http://127.0.0.1:8080/events",
     {
       method: "POST",
@@ -98,10 +112,10 @@ function AddEvent() {
         <div className="sect-1">
           <div class = "img-group">
             <div className='img-pick'>
-              <img src={newEvent.picture}/>
+              <img src={displayPic}/>
             </div>
             <div className='form-group'>
-            <input type = "file" onChange={onImageChange} className="form-control-file" required/>
+            <input type = "file" onChange={onImageChange} className="form-control-file" accept="image/" required/>
             </div>
           </div>
           <div className = "es">
@@ -123,8 +137,13 @@ function AddEvent() {
               Featured
             </label>
           </div>
-          {newEvent.isFeatured && 
-          <small>Note that featured requests are reviewed by the OCPD office and take up to 3 days to approve.</small>}
+          {newEvent.isFeatured &&
+          <>
+          <small>Note that featured requests are reviewed by the OCPD office and take up to 3 days to approve.</small>
+          <div className='form-group'>
+            <input type = "file" onChange={onCarouselImageChange} accept="image/" className="form-control-file" required/>
+            </div>
+          </> }
           <div className="form-group">
             <label for="sign-link" id="etl">Sign up link</label>
             <input class="form-control" id="sign-link"
@@ -252,6 +271,7 @@ function AddEvent() {
             </div>
             </>
             }
+            <label for="date" >Date</label>
             <DatePicker name="date" onChange={dateChange}/>
             <div className="form-group">
               <label for="time" >Time</label>

@@ -3,27 +3,222 @@ INFO:mysql.connector:plugin_name: caching_sha2_password
 INFO:mysql.connector:AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
 WARNING:werkzeug: * Debugger is active!
 INFO:werkzeug: * Debugger PIN: 714-719-195
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "OPTIONS /orgs HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "OPTIONS /orgs/gabe@gmail.com HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "OPTIONS /orgs HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "OPTIONS /orgs/gabe@gmail.com HTTP/1.1" 200 -
-ERROR:root:USER ORG ERROR: An error has occured: Failed processing format-parameters; MySQL Connection not available
-ERROR:root:ALL ORGS ERROR: An error has occured: 2055: Lost connection to MySQL server at 'localhost:3306', system error: 1 [SSL: WRONG_VERSION_NUMBER] wrong version number (_ssl.c:2578)
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "GET /orgs/gabe@gmail.com HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:46] "GET /orgs HTTP/1.1" 200 -
-ERROR:root:ALL ORGS ERROR: An error has occured: 2055: Lost connection to MySQL server at 'localhost:3306', system error: 8 EOF occurred in violation of protocol (_ssl.c:2426)
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:47] "GET /orgs HTTP/1.1" 200 -
-ERROR:root:USER ORG ERROR: An error has occured: Failed processing format-parameters; MySQL Connection not available
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:47] "GET /orgs/gabe@gmail.com HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "OPTIONS /orgs HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "OPTIONS /orgs/gabe@gmail.com HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "OPTIONS /orgs HTTP/1.1" 200 -
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "OPTIONS /orgs/gabe@gmail.com HTTP/1.1" 200 -
-ERROR:root:ALL ORGS ERROR: An error has occured: 2055: Lost connection to MySQL server at 'localhost:3306', system error: 8 EOF occurred in violation of protocol (_ssl.c:2426)
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "GET /orgs HTTP/1.1" 200 -
-ERROR:root:USER ORG ERROR: An error has occured: Failed processing format-parameters; MySQL Connection not available
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "GET /orgs/gabe@gmail.com HTTP/1.1" 200 -
-ERROR:root:ALL ORGS ERROR: An error has occured: 2055: Lost connection to MySQL server at 'localhost:3306', system error: 8 EOF occurred in violation of protocol (_ssl.c:2426)
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "GET /orgs HTTP/1.1" 200 -
-ERROR:root:USER ORG ERROR: An error has occured: Failed processing format-parameters; MySQL Connection not available
-INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 14:30:57] "GET /orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:04:43] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:04:43] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:05:37] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:05:37] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:06:09] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:06:09] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:14:01] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:14:01] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:14:01] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:14:01] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:15:03] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:15:03] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:15:03] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:15:03] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:15:34] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:15:34] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:15:34] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:15:34] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:18:31] "OPTIONS /events HTTP/1.1" 200 -
+INFO:root:Success: Event added
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:18:31] "POST /events HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:19:16] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:19:16] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:20:05] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:20:05] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:20:05] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:20:05] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:20:32] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:20:32] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:20:32] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:20:32] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:25:22] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:25:22] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:25:22] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:25:22] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:27:43] "OPTIONS /events HTTP/1.1" 200 -
+INFO:root:Success: Event added
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:27:43] "POST /events HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:27:43] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:27:43] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:27:43] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:27:43] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:28:26] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:28:26] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:28:26] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:28:26] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:16] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:16] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:16] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:16] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:21] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:21] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:22] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:22] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:33] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:33] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:33] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:29:33] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:34:37] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:34:37] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:34:37] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:34:37] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:34:46] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:34:46] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:40:22] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:40:22] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:40:22] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:40:22] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:41:11] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:41:11] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:19] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:19] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:35] "OPTIONS /events HTTP/1.1" 200 -
+INFO:root:Success: Event added
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:35] "POST /events HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:35] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:35] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:35] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:35] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:48] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:48] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:48] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:45:48] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:47:04] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:47:04] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:47:04] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:47:04] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:51:52] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:51:52] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:51:52] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:51:52] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:51:56] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:51:56] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:52:27] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:52:27] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:52:27] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:52:27] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:52:31] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 22:52:31] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:00:21] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:00:21] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:00:21] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:00:21] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:01:45] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:01:45] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:01:45] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:01:45] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:01:47] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:01:47] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:01:47] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:01:47] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:02:57] "OPTIONS /events HTTP/1.1" 200 -
+INFO:root:Success: Event added
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:02:57] "POST /events HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:02:57] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:02:57] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:02:57] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:02:57] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:03:02] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:03:02] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:03:03] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:03:03] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:15:42] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:15:42] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:15:42] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:15:42] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:17:33] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:17:33] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:17:33] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:17:33] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:32] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:32] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:32] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:32] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:53] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:53] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:53] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:53] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:56] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:56] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:56] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:19:56] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:20:34] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:20:34] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:20:38] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:20:38] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:22:40] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:22:40] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:24:00] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:24:00] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:24:06] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:24:06] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:24:06] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:24:07] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:25:19] "OPTIONS /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:User Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:25:19] "GET /user-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:15] "OPTIONS /events HTTP/1.1" 200 -
+INFO:root:Success: Event added
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:15] "POST /events HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:15] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:15] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:15] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:16] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:23] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:23] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:24] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:26:24] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:03] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:03] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:03] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:03] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:05] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:06] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:54] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:54] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:54] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:54] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:57] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:57] "OPTIONS /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:58] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:27:58] "GET /events/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:28:02] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:28:02] "OPTIONS /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:28:02] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
+INFO:root:Organizations retrieved successfully
+INFO:werkzeug:127.0.0.1 - - [18/Apr/2024 23:28:02] "GET /e-orgs/gabe@gmail.com HTTP/1.1" 200 -
