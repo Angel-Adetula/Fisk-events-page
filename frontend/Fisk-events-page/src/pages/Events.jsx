@@ -24,6 +24,7 @@ const handleSignIn = () => {
   window.location.href = "/sign-in";
 };
 
+
 const originalData = [
   {
     title: "Diverse Roles in Tech",

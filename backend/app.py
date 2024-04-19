@@ -117,7 +117,20 @@ def retrieve_orgs():
         result = {"error": None, "result": r}
     return jsonify(result) 
 
-@app.route("/orgs/<userId>", methods=['GET'])
+
+@app.route("/my-orgs/<orgId>", methods=['GET'])
+
+
+def get_all_my_orgs(orgId):
+    orgList = []
+    
+    for id in orgId:
+        org = backend.retrieve_org_with_id(id)
+        orgList.append(org)
+
+    return jsonify({"result": orgList})
+
+@app.route("/e-orgs/<userId>", methods=['GET'])
 def get_user_orgs(userId):
     userOrgs = backend.retrieve_user_orgs(usr=userId)
     err = userOrgs[1]

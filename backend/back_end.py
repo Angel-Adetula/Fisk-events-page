@@ -121,18 +121,37 @@ class Backend:
             orgs_query = "SELECT * FROM organizations;"
             self.sql_cursor.execute(orgs_query)
             result = self.sql_cursor.fetchall()
+            self.sql_conn.commit()
         except Exception as e:
             logging.error(f"ALL ORGS ERROR: An error has occured: {e}")
             return (None, e)
         else:
             return (result, None)
     
+    def retrieve_org_with_id(self, id):
+        try:
+            orgs_query = "SELECT NAME FROM organizations where OrgID = %s;"
+            self.sql_cursor.execute(orgs_query, (id, ))
+            result = self.sql_cursor.fetchall()
+            self.sql_conn.commit()
+        except Exception as e:
+            logging.error(f"ORGS FROM ORG ID ERROR: An error has occured: {e}")
+            return (None, e)
+        else:
+            return (result, None)
+            
     def retrieve_user_orgs(self, usr):
         try:
-            orgs_query = "SELECT * from userorg WHERE user = %s;"
+            orgs_query = '''
+    SELECT t1.OrgID, t1.role, t1.approved, t2.name
+    FROM userorg t1
+    INNER JOIN organizations t2 ON t1.OrgID = t2.OrgID
+    WHERE t1.user = %s;
+'''
             
             self.sql_cursor.execute(orgs_query, (usr,))
             result = self.sql_cursor.fetchall()
+            self.sql_conn.commit()
         except Exception as e:
             logging.error(f"USER ORG ERROR: An error has occured: {e}")
             return (None, e)

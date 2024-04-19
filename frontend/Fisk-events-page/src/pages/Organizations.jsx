@@ -7,6 +7,7 @@ import "./style/org.css"
 
 function Organizations() {
     const [userOrgs, setUserOrgs] = useState([]);
+    const [userOrgId, setUserOrgId] = useState([]);
     const [showJoin, setShowJoin] = useState(false);
     const [showRegister, setShowRegister] = useState(false);
     const [orgs, setOrgs] = useState([]);
@@ -54,7 +55,6 @@ function Organizations() {
         }
         )
       }
-
       const joinOrg = (event) => {
         console.log("clicked submit-join")
         console.log("r", userJoins.org)
@@ -89,41 +89,97 @@ function Organizations() {
       }
 
       useEffect(() => {
-        fetch("http://127.0.0.1:8080/orgs", 
-        {
-            method: 'GET',
-            headers: {
-              "Accept" : 'application/json',
-              "Content-Type": "application/json"
-            },
-        
-        }).then(res=> res.json())
-        .then(stats=> {
-            if (stats.error) {
-                return alert(stats.error)
-            } else {
-            const n_res = stats.result.map(item=> ({"org_id":item[0], "org_name":item[1]}))
-            setOrgs(n_res)
-            }
-            console.log("c", orgs)
-        })
-        fetch(`http://127.0.0.1:8080/orgs/${userId}`, 
-        {
-            method: 'GET',
-            headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json'
-            },        
-        }).then(res=> res.json())
-        .then(stats=> {
-            if(stats.error){
-            return alert(stats.error)
-            } else{
-                setUserOrgs(stats.result)
-            }
-        })
-    }, []);
+        const fetchUserOrgs = async () => {
+          try {
+            const response = await fetch(`http://127.0.0.1:8080/e-orgs/${userId}`, {
+              method: 'GET',
+              headers: {
+                "Accept": 'application/json',
+                "Content-Type": "application/json" // Potentially unnecessary for GET requests (check API docs)
+              }
+            });
     
+            if (!response.ok) {
+              throw new Error(`HTTP error! status: ${response.status}`);
+            }
+    
+            const data = await response.json();
+    
+            if (data.error) {
+              console.error("Error from server:", data.error);
+              // Handle server-side errors appropriately (e.g., display user-friendly message)
+            } else {
+              var idList = []
+              data.result.map(data => {
+                idList.push(data[0])
+              })
+              var orgList = []
+              data.result.map(data => {
+                orgList.push(data[1])
+              })
+              // setUserOrgId(data.result)
+              console.log("mn", idList)
+              setUserOrgId(idList)
+              setUserOrgs(data.result)
+              console.log("l", userOrgs)
+
+            }
+          } catch (error) {
+            console.error("Error fetching data:", error);
+            // Handle general errors gracefully (e.t., display an error message)
+          }
+        };
+            fetchUserOrgs();
+      }, []); 
+    //     fetch(`http://127.0.0.1:8080/orgs/${userId}`, 
+    //     {
+    //         method: 'GET',
+    //         headers: {
+    //         'Accept': 'application/json',
+    //         'Content-Type': 'application/json'
+    //         },        
+    //     }).then(res=> res.json())
+    //     .then(stats=> {
+    //         if(stats.error){
+    //         return alert(stats.error)
+    //         } else{
+    //             setUserOrgs(stats.result)
+    //         }
+    //     })
+    // }, []);
+
+    // useEffect(() => {
+    //   const getUserList = async () => {
+    //     try {
+    //       const response = await fetch(`http://127.0.0.1:8080/my-orgs${userOrgId}`, {
+    //         method: 'GET',
+    //         mode:"no-cors",
+    //         headers: {
+    //           "Accept": 'application/json',
+    //           "Content-Type": "application/json" // Potentially unnecessary for GET requests (check API docs)
+    //         }
+    //       });
+  
+    //       if (!response.ok) {
+    //         throw new Error(`HTTP error! status: ${response.status}`);
+    //       }
+  
+    //       const data = await response.json();
+    //       console.log(data)
+  
+    //       if (data.error) {
+    //         console.error("Error from server:", data.error);
+    //         // Handle server-side errors appropriately (e.g., display user-friendly message)
+    //       } else {
+    //         setUserOrgs(data.result)
+    //       }
+    //     } catch (error) {
+    //       console.error("Error fetching data:", error);
+    //       // Handle general errors gracefully (e.t., display an error message)
+    //     }
+    //   };
+    //       getUserList();
+    // }, [userOrgId])
 
   return (
     <div className='bg'>
@@ -137,10 +193,8 @@ function Organizations() {
         </div>
         <div>
         {userOrgs.map(userOrg =>{
-          const o_n= findMatch(userOrg[0]);
-          const name = o_n[0].org_name;
           return(
-            <Org_Card org_name={name} user_role={userOrg?.[2]} org_id={userOrg?.[0]}/>
+            <Org_Card org_name={userOrg?.[3]} user_role={userOrg?.[1]} org_id={userOrg?.[0]}/>
           )
         })}
         </div>
